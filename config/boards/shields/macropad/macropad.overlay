@@ -8,17 +8,18 @@
         label = "default_kscan";
 
         input-gpios =
-            <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
-            <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
-            <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>,
-            <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+            <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "encoder";
-        a-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        b-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         steps = <80>;
         status = "okay";
     };
